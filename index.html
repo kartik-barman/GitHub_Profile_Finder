@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Finder | Kartik Barman</title>
+    <link rel="shortcut icon" href="./github-logo.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .profile-card {
+            width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        .follow {
+            font-size: 1.2rem;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .custom-input {
+            border-radius: 5px;
+            padding: 10px;
+            width: 60%;
+            transition: border-color 0.3s ease;
+        }
+        .custom-input:focus {
+            outline: none;
+            border-color: #0056b3; 
+        }
+        .custom-btn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .custom-btn:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="search-container text-center mb-4 d-flex align-items-center">
+            <input
+                type="text"
+                id="input"
+                placeholder="Enter GitHub Username"
+                class="custom-input"
+            />
+            <button id="search" class="custom-btn ml-2">
+                Search User
+            </button>
+        </div>
+
+        <div class="profile-card bg-white p-4 text-center">
+            <div class="main-info mb-3">
+                <img src="https://avatars.githubusercontent.com/u/121763970?v=4" alt="avatar" id="prof-img" class="profile-img" />
+                <h2 class="name" id="name">Kartik Barman</h2>
+                <a href="#" id="username" class="text-muted">@kartik-barman</a>
+            </div>
+            <div class="bio mb-3">
+                <p id="bio" class="text-secondary">A full stack developer</p>
+                <p><span id="repo">36</span> Repositories</p>
+            </div>
+            <div class="follow d-flex justify-content-around">
+                <div class="followers text-center">
+                    <span class="no font-weight-bold" id="followers">1k+</span><br />
+                    Followers
+                </div>
+                <div class="following text-center">
+                    <span class="no font-weight-bold" id="following">1</span><br />
+                    Following
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js//app.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
